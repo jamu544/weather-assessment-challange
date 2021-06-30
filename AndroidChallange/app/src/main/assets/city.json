@@ -1,0 +1,72 @@
+{ "cities":  [
+  {
+    "city": "Madrid",
+    "lat": "40.4165",
+    "lon": "-3.7026",
+    "country":"ES"
+  },
+  {
+    "city": "Lisbon",
+    "lat": "38.7167",
+    "lon": "-9.1333",
+    "country":"PT"
+
+  },
+  {
+    "city": "Paris",
+    "lat": "48.8534",
+    "lon": "2.3488",
+    "country":"FR"
+
+  },
+  {
+    "city": "Berlin",
+    "lat": "52.5244",
+    "lon": "13.4105",
+    "country":"DE"
+
+  },
+  {
+    "city": "Copenhagen",
+    "lat": "55.6759",
+    "lon": "12.5655",
+    "country":"DK"
+
+  },
+  {
+    "city": "Rome",
+    "lat": "41.8947",
+    "lon": "12.4839",
+    "country":"IT"
+
+  },
+  {
+    "city": "London",
+    "lat": "51.5085",
+    "lon": "-0.1257",
+    "country":"GB"
+
+  },
+  {
+    "city": "Dublin",
+    "lat": "53.344",
+    "lon": "-6.2672",
+    "country":"IE"
+
+  },
+  {
+    "city": "Prague",
+    "lat": "50.088",
+    "lon": "14.4202",
+    "country":"CZ"
+
+  },
+  {
+    "city": "Vienna,AT",
+    "lat": "48.2085",
+    "lon": "16.3721",
+    "country":"AT"
+
+  }
+]
+}

@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="20dp"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:paddingTop="20dp"
+    android:orientation="vertical"
+    android:background="@drawable/background1"
+    tools:context=".WeatherConditionsActivity">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="15dp"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:paddingRight="15dp"
+        android:background="@drawable/background1"
+        android:descendantFocusability="afterDescendants"
+        >
+
+    <TextView
+        android:id="@+id/locationTxtView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Khayelitsha"
+        android:visibility="visible"
+        style="@style/TextviewStyleCity"
+        android:layout_above="@+id/weatherDescription"/>
+
+    <TextView
+        android:id="@+id/weatherTxtView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:maxLines="1"
+        android:singleLine="false"
+        android:text="Mostly Clear"
+        android:gravity="center"
+        style="@style/TextviewStyleWeatherDescr"
+        android:layout_centerInParent="true"
+        android:layout_above="@+id/degressTextView"/>
+
+    <TextView
+        android:id="@+id/degressTxtView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:maxLines="1"
+        android:singleLine="false"
+        android:text="19"
+        style="@style/TextviewStyleWeatherDegress"
+        android:gravity="center"
+        android:layout_centerInParent="true" />
+</LinearLayout>
+
+
+    <!-- Here the current weather data -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background1"
+        android:orientation="vertical"
+        android:paddingLeft="15dp"
+        android:paddingTop="15dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="15dp">
+
+        <!-- Temperature data -->
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/tempIcon"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/thermometer" />
+
+        <TextView
+            android:id="@+id/tempMin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/tempIcon"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="12dp"
+            android:layout_toRightOf="@id/tempIcon"
+            android:gravity="center_horizontal" />
+
+        <TextView
+            android:id="@+id/tempMax"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/tempMin"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/tempMin"
+            android:gravity="right" />
+        </RelativeLayout>
+        <!-- End temp Data -->
+
+        <!-- Wind data -->
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/windIcon"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/wind_vane" />
+
+        <TextView
+            android:id="@+id/windSpeed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/windIcon"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="12dp"
+            android:layout_toRightOf="@id/windIcon" />
+
+        <TextView
+            android:id="@+id/windDeg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/windSpeed"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/windSpeed" />
+        </RelativeLayout>
+
+        <!-- End wind Data -->
+
+        <!-- Humidity -->
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/humidityIcon"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/humidity" />
+
+        <TextView
+            android:id="@+id/humidity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/humidityIcon"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="12dp"
+            android:layout_toRightOf="@id/humidityIcon" />
+        </RelativeLayout>
+
+        <!-- End Humidity Data -->
+
+        <!-- Sunrise -->
+        <ImageView
+            android:id="@+id/sunIcon"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/sunrise" />
+
+        <TextView
+            android:id="@+id/sunrise"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/sunIcon"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="12dp"
+            android:layout_toRightOf="@id/sunIcon" />
+
+        <ImageView
+            android:id="@+id/moonIcon"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_below="@id/sunset"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/sunset" />
+
+        <TextView
+            android:id="@+id/sunset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/moonIcon"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="12dp"
+            android:layout_toRightOf="@id/moonIcon" />
+
+        <!-- End astronomy -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:text="data provided by openweathermap.org"
+            android:textSize="10sp" />
+    </LinearLayout>
+
+
+
+
+
+
+
+</LinearLayout>
